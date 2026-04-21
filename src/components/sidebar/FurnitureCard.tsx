@@ -27,7 +27,7 @@ export function FurnitureCard({ template }: FurnitureCardProps) {
       draggable
       onDragStart={handleDragStart}
       onDoubleClick={handleDoubleClick}
-      className="flex items-center gap-2.5 px-2.5 py-2 rounded-lg hover:bg-zinc-50 cursor-grab active:cursor-grabbing transition-colors select-none group"
+      className="flex items-center gap-2.5 px-2.5 py-2 rounded-lg hover:bg-surface-hover cursor-grab active:cursor-grabbing transition-colors select-none group"
       title={`${template.defaultWidthFt}' × ${template.defaultHeightFt}' — drag to canvas or double-click`}
     >
       {/* Proportional color swatch */}
@@ -44,15 +44,15 @@ export function FurnitureCard({ template }: FurnitureCardProps) {
         }}
       />
       <div className="flex-1 min-w-0">
-        <div className="text-xs font-medium text-zinc-700 truncate leading-tight">{template.name}</div>
-        <div className="text-[11px] text-zinc-400 mt-0.5 tabular-nums">
+        <div className="text-xs font-medium text-text-primary truncate leading-tight">{template.name}</div>
+        <div className="text-[11px] text-text-muted mt-0.5 tabular-nums">
           {template.defaultWidthFt}′ × {template.defaultHeightFt}′
         </div>
       </div>
       {/* Drag hint */}
       <svg
         width="12" height="12" viewBox="0 0 12 12" fill="none"
-        className="flex-shrink-0 text-zinc-300 opacity-0 group-hover:opacity-100 transition-opacity"
+        className="flex-shrink-0 text-text-muted opacity-0 group-hover:opacity-100 transition-opacity"
       >
         <circle cx="4" cy="3" r="1" fill="currentColor"/>
         <circle cx="8" cy="3" r="1" fill="currentColor"/>

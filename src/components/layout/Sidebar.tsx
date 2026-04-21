@@ -24,17 +24,17 @@ export function Sidebar() {
   ];
 
   return (
-    <div className="w-72 flex-shrink-0 bg-white border-r border-zinc-200 flex flex-col">
+    <div className="w-72 flex-shrink-0 bg-white border-r border-border-warm flex flex-col">
       {/* Tab bar */}
-      <div className="flex border-b border-zinc-200 bg-zinc-50/60">
+      <div className="flex border-b border-border-warm bg-white">
         {tabs.map((t) => (
           <button
             key={t.id}
             onClick={() => setTab(t.id)}
             className={`relative flex-1 py-2.5 text-xs font-medium transition-colors ${
               tab === t.id
-                ? 'text-zinc-900'
-                : 'text-zinc-400 hover:text-zinc-600'
+                ? 'text-text-primary'
+                : 'text-text-muted hover:text-text-secondary'
             }`}
           >
             {t.label}
@@ -44,14 +44,14 @@ export function Sidebar() {
               </span>
             )}
             {tab === t.id && (
-              <span className="absolute bottom-0 inset-x-2 h-0.5 bg-zinc-900 rounded-full" />
+              <span className="absolute bottom-0 inset-x-2 h-0.5 bg-accent rounded-full" />
             )}
           </button>
         ))}
       </div>
 
       {/* Panel content */}
-      <div className="flex-1 overflow-y-auto p-3.5">
+      <div className="flex-1 overflow-y-auto p-3">
         {tab === 'floorplan'  && <FloorplanPanel />}
         {tab === 'library'    && <FurnitureLibraryPanel />}
         {tab === 'collection' && <MyCollectionPanel />}
@@ -59,9 +59,9 @@ export function Sidebar() {
       </div>
 
       {/* Footer hint */}
-      <div className="px-3.5 py-2.5 border-t border-zinc-100">
-        <p className="text-[11px] text-zinc-400 leading-relaxed">
-          Click to select · drag to move · <kbd className="bg-zinc-100 text-zinc-500 px-1 py-0.5 rounded text-[10px]">Del</kbd> to remove
+      <div className="px-3.5 py-2.5 border-t border-border-warm">
+        <p className="text-[11px] text-text-muted leading-relaxed">
+          Click to select · drag to move · <kbd className="bg-surface-card text-text-secondary px-1 py-0.5 rounded text-[10px] border border-border-warm">Del</kbd> to remove
         </p>
       </div>
     </div>
