@@ -1,39 +1,34 @@
 # Furniture Planner
 
-An AI-powered web app for designing room layouts before you move a single piece of furniture.
+Moving furniture is a gamble. You drag everything across the room and realize the couch blocks the window. You spent your Saturday on a layout that's worse than what you started with.
 
-## What it is
+This is a web app for planning furniture arrangements before any of that happens. Upload a floor plan, calibrate it to your room's actual dimensions, and place furniture from the built-in library to see what works. There's also an AI assistant (Claude) for when you're staring at an awkward corner and don't know what to do with it.
 
-Furniture Planner is a drag-and-drop room layout tool that lets you map out your space, place furniture to scale, and experiment with different arrangements — all from your browser. Upload a photo of your floorplan, calibrate it to real-world dimensions, and start placing pieces from a built-in furniture library or your own saved collection.
+## Why I built it
 
-The app uses AI to help you think through layouts and make decisions, so you're not just pushing boxes around a canvas — you have a design assistant in the loop.
+Most room planning tools either skip real dimensions entirely or need an hour to set up. I wanted something calibrated to actual measurements, with an AI in the loop for suggestions, that you could start using in under 5 minutes. So I built it.
 
-## Why it exists
+## What's inside
 
-Rearranging furniture is physical, time-consuming, and often disappointing when the new arrangement doesn't work. Most people either sketch rough ideas on paper (inaccurate) or just move things and hope for the best (exhausting). Furniture Planner gives you a fast, visual way to test layouts digitally before committing to anything in the real world.
+**Floorplan canvas.** Upload a floor plan image and calibrate it to real-world measurements.
 
-## Features
+**Furniture library.** Pre-built pieces scaled to standard dimensions. Drag and drop onto the canvas.
 
-- **Floorplan canvas** — Upload a room image and calibrate it to accurate measurements
-- **Furniture library** — Browse and place common furniture pieces scaled to real dimensions
-- **Saved collection** — Save your own custom pieces for reuse across layouts
-- **Properties panel** — Adjust size, rotation, and position of any piece precisely
-- **AI assistant** — Get layout suggestions and design feedback powered by Claude
+**Saved collection.** Add custom pieces and reuse them across layouts.
 
-## Tech stack
+**Properties panel.** Adjust rotation, size, and exact position of any piece.
 
-- React + TypeScript
-- Vite
-- Konva / react-konva (canvas rendering)
-- Zustand (state management)
-- Tailwind CSS
-- Anthropic SDK (AI features)
+**AI assistant.** Powered by Claude. Ask it what to do with a tricky layout or get a second opinion before you commit.
 
-## Getting started
+## Tech
+
+React, TypeScript, Vite, Konva / react-konva, Zustand, Tailwind CSS, Anthropic SDK.
+
+## Run it
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+[http://localhost:5173](http://localhost:5173)
